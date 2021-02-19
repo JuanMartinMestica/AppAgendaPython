@@ -2,7 +2,14 @@ import re
 
 
 class Validar:
+
+    """Clase Validar donde se realizan todas las validaciones de los campos
+    de la App, para asegurar la consistencia de los datos"""
+
     def __init__(self):
+
+        """Inicializador de la clase Validar, se crean los patrones que se deben respetar"""
+
         self.patron_numero = re.compile("^[0-9]{6,12}$")
         self.patron_nombre = re.compile("^[a-zA-z áéíóú]{2,20}$")
         self.patron_mail = re.compile(
